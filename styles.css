@@ -1,15 +1,15 @@
-/* Общий фон */
+/* ГЋГЎГ№ГЁГ© ГґГ®Г­ */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a0dad, #7b3e95); /* Градиентный фон */
+    background: #080606 /* ГѓГ°Г Г¤ГЁГҐГ­ГІГ­Г»Г© ГґГ®Г­ */
     color: #fff;
     overflow-x: hidden;
 }
 
-/* Шапка и меню */
+/* ГГ ГЇГЄГ  ГЁ Г¬ГҐГ­Гѕ */
 .navbar {
-    background-color: #4b2d72; /* Темно-фиолетовый */
+    background-color: #4b2d72; /* Г’ГҐГ¬Г­Г®-ГґГЁГ®Г«ГҐГІГ®ГўГ»Г© */
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
@@ -33,12 +33,12 @@ body {
     }
 
         .navbar a:hover {
-            color: #9b4ca2; /* Цвет для hover */
+            color: #9b4ca2; /* Г–ГўГҐГІ Г¤Г«Гї hover */
         }
 
-/* Кнопка */
+/* ГЉГ­Г®ГЇГЄГ  */
 button {
-    background-color: #7b3e95; /* Цвет кнопки */
+    background-color: #7b3e95; /* Г–ГўГҐГІ ГЄГ­Г®ГЇГЄГЁ */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -52,7 +52,7 @@ button {
         background-color: #9b4ca2;
     }
 
-/* Блок с изображением и контактами */
+/* ГЃГ«Г®ГЄ Г± ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГҐГ¬ ГЁ ГЄГ®Г­ГІГ ГЄГІГ Г¬ГЁ */
 .intro {
     display: flex;
     justify-content: center;
@@ -70,18 +70,18 @@ button {
     margin-right: 40px;
 }
 
-/* Анимация для появления блоков */
+/* ГЂГ­ГЁГ¬Г Г¶ГЁГї Г¤Г«Гї ГЇГ®ГїГўГ«ГҐГ­ГЁГї ГЎГ«Г®ГЄГ®Гў */
 .fade-in {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Блоки с текстом */
+/* ГЃГ«Г®ГЄГЁ Г± ГІГҐГЄГ±ГІГ®Г¬ */
 section {
     padding: 50px;
     text-align: center;
     margin-bottom: 50px;
-    background-color: #4B0082; /* Темный фон для блоков */
+    background-color: #4B0082; /* Г’ГҐГ¬Г­Г»Г© ГґГ®Г­ Г¤Г«Гї ГЎГ«Г®ГЄГ®Гў */
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -106,12 +106,12 @@ section {
     }
 
         section .images img {
-            max-width: 60%; /* Уменьшаем картинку */
+            max-width: 60%; /* Г“Г¬ГҐГ­ГјГёГ ГҐГ¬ ГЄГ Г°ГІГЁГ­ГЄГі */
             height: auto;
             margin: 10px;
         }
 
-/* Блок "Связаться с нами" */
+/* ГЃГ«Г®ГЄ "Г‘ГўГїГ§Г ГІГјГ±Гї Г± Г­Г Г¬ГЁ" */
 footer {
     background-color: #3b2a47;
     padding: 30px;
@@ -137,14 +137,14 @@ footer {
             text-decoration: underline;
         }
 
-/* Настройка шрифта */
+/* ГЌГ Г±ГІГ°Г®Г©ГЄГ  ГёГ°ГЁГґГІГ  */
 h1, h2, p, button {
     font-family: 'Arial', sans-serif;
 }
 
-/* Адаптивная верстка */
+/* ГЂГ¤Г ГЇГІГЁГўГ­Г Гї ГўГҐГ°Г±ГІГЄГ  */
 
-/* Стиль для экранов до 768px (планшеты и мобильные устройства) */
+/* Г‘ГІГЁГ«Гј Г¤Г«Гї ГЅГЄГ°Г Г­Г®Гў Г¤Г® 768px (ГЇГ«Г Г­ГёГҐГІГ» ГЁ Г¬Г®ГЎГЁГ«ГјГ­Г»ГҐ ГіГ±ГІГ°Г®Г©Г±ГІГўГ ) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -186,7 +186,7 @@ h1, h2, p, button {
         }
 
             section .images img {
-                max-width: 90%; /* Уменьшаем картинку на мобильных устройствах */
+                max-width: 90%; /* Г“Г¬ГҐГ­ГјГёГ ГҐГ¬ ГЄГ Г°ГІГЁГ­ГЄГі Г­Г  Г¬Г®ГЎГЁГ«ГјГ­Г»Гµ ГіГ±ГІГ°Г®Г©Г±ГІГўГ Гµ */
                 margin: 10px 0;
             }
 
@@ -196,7 +196,7 @@ h1, h2, p, button {
     }
 }
 
-/* Стиль для экранов до 480px (мобильные устройства) */
+/* Г‘ГІГЁГ«Гј Г¤Г«Гї ГЅГЄГ°Г Г­Г®Гў Г¤Г® 480px (Г¬Г®ГЎГЁГ«ГјГ­Г»ГҐ ГіГ±ГІГ°Г®Г©Г±ГІГўГ ) */
 @media (max-width: 480px) {
     .navbar {
         padding: 10px;
