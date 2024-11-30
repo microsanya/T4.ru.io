@@ -174,7 +174,6 @@ h1, h2, p, button {
     .navbar .contact-button {
         font-size: 14px; /* Еще меньше шрифт на совсем маленьких экранах */
         padding: 10px 20px; /* Уменьшаем отступы */
-        width: 100%; /* Кнопка на всю ширину экрана */
     }
 
         .navbar a {
