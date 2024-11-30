@@ -241,6 +241,7 @@ h1, h2, p, button {
 
     .navbar .logo {
         font-size: 24px; /* Еще меньше шрифт на совсем маленьких экранах */
+        text-align: center;
     }
 
     .navbar .contact-button {
