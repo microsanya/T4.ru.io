@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a0dad, #7b3e95); /* Градиентный фон */
+    background: linear-gradient(135deg, #0b050f, #000); /* Градиентный фон */
     color: #fff;
     overflow-x: hidden;
 }
@@ -35,6 +35,25 @@ body {
         .navbar a:hover {
             color: #9b4ca2; /* Öâåò äëÿ hover */
         }
+/* Основной стиль кнопки */
+.navbar .contact-button {
+    background-color: #9b4ca2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #9b4ca2;
+}
+
+.navbar .contact-button:hover {
+    background-color: #7a2c7e;
+    transform: scale(1.1);
+}
 
 /* Êíîïêà */
 button {
@@ -146,10 +165,23 @@ h1, h2, p, button {
 
 /* Ñòèëü äëÿ ýêðàíîâ äî 768px (ïëàíøåòû è ìîáèëüíûå óñòðîéñòâà) */
 @media (max-width: 768px) {
+
     .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
+        flex-direction: column; /* Переводим элементы шапки в столбик */
+        align-items: flex-start; /* Выровнять по левому краю */
+        padding: 20px 10px; /* Увеличиваем отступы для мобильных устройств */
+    }
+
+    .navbar .contact-button {
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+        padding: 12px 25px; /* Увеличиваем отступы кнопки */
+        width: 100%; /* Делаем кнопку на всю ширину экрана */
+        margin-top: 20px; /* Отступ сверху для кнопки */
+    }
+    .navbar .contact-button {
+        font-size: 14px; /* Еще меньше шрифт на совсем маленьких экранах */
+        padding: 10px 20px; /* Уменьшаем отступы */
+        width: 100%; /* Кнопка на всю ширину экрана */
     }
 
         .navbar a {
