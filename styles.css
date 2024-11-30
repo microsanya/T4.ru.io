@@ -2,8 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #080606 /* Ãðàäèåíòíûé ôîí */
-    color: #fff;
+    background-color: #080606 /* Ãðàäèåíòíûé ôîí */
     overflow-x: hidden;
 }
 
