@@ -171,9 +171,15 @@ h1, h2, p, button {
         align-items: flex-start; /* Выровнять по левому краю */
         padding: 20px 10px; /* Увеличиваем отступы для мобильных устройств */
     }
+
     .navbar .contact-button {
-        font-size: 14px; /* Еще меньше шрифт на совсем маленьких экранах */
-        padding: 10px 20px; /* Уменьшаем отступы */
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+        padding: 12px 20px; /* Увеличиваем отступы кнопки */
+        width: auto; /* Убираем растяжение на всю ширину */
+        max-width: 90%; /* Ограничиваем максимальную ширину кнопки */
+        margin-top: 20px; /* Отступ сверху для кнопки */
+        margin-left: auto; /* Центрируем кнопку */
+        margin-right: auto; /* Центрируем кнопку */
     }
 
         .navbar a {
@@ -224,6 +230,15 @@ h1, h2, p, button {
 @media (max-width: 480px) {
     .navbar {
         padding: 10px;
+    }
+
+    .navbar .contact-button {
+        font-size: 14px; /* Еще меньше шрифт на совсем маленьких экранах */
+        padding: 10px 20px; /* Уменьшаем отступы */
+        max-width: 90%; /* Ограничиваем максимальную ширину кнопки */
+        width: auto; /* Убираем растяжение на всю ширину */
+        margin-left: auto; /* Центрируем кнопку */
+        margin-right: auto; /* Центрируем кнопку */
     }
 
         .navbar .logo {
