@@ -1,0 +1,237 @@
+/* Общий фон */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #7b3e95); /* Градиентный фон */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Шапка и меню */
+.navbar {
+    background-color: #4b2d72; /* Темно-фиолетовый */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 20px;
+        transition: color 0.3s;
+    }
+
+        .navbar a:hover {
+            color: #9b4ca2; /* Цвет для hover */
+        }
+
+/* Кнопка */
+button {
+    background-color: #7b3e95; /* Цвет кнопки */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #9b4ca2;
+    }
+
+/* Блок с изображением и контактами */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.bot-image {
+    max-width: 400px;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+/* Анимация для появления блоков */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Блоки с текстом */
+section {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #4B0082; /* Темный фон для блоков */
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 1.2em;
+    }
+
+    section .images {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        section .images img {
+            max-width: 60%; /* Уменьшаем картинку */
+            height: auto;
+            margin: 10px;
+        }
+
+/* Блок "Связаться с нами" */
+footer {
+    background-color: #3b2a47;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        footer ul li {
+            margin: 10px 0;
+        }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+/* Настройка шрифта */
+h1, h2, p, button {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Адаптивная верстка */
+
+/* Стиль для экранов до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+        .navbar a {
+            margin: 10px 0;
+        }
+
+    .intro {
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+
+    .bot-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+        section h2 {
+            font-size: 1.8em;
+        }
+
+        section p {
+            font-size: 1.1em;
+        }
+
+        section .images {
+            flex-direction: column;
+        }
+
+            section .images img {
+                max-width: 90%; /* Уменьшаем картинку на мобильных устройствах */
+                margin: 10px 0;
+            }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* Стиль для экранов до 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+        .navbar .logo {
+            font-size: 24px;
+        }
+
+    .intro h1 {
+        font-size: 22px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .bot-image {
+        max-width: 80%;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    section .images img {
+        max-width: 100%;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
