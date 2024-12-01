@@ -1,28 +1,40 @@
-/* Îáùèé ôîí */
+/* Обновление общего фона с картинкой */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0b050f, #000); /* Градиентный фон */
+    background: url('design/back.jpg') no-repeat center center fixed; /* Подключаем картинку как фон */
+    background-size: cover; /* Фон покрывает всю площадь экрана */
     color: #fff;
     overflow-x: hidden;
 }
-
-/* Øàïêà è ìåíþ */
+/* Хедер с паддингом и выравниванием */
 .navbar {
-    background-color: #4b2d72; /* Òåìíî-ôèîëåòîâûé */
-    padding: 10px 30px;
+    background-color: #4b2d72;
+    padding: 20px 40px; /* Добавлены паддинги */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-    .navbar .logo {
-        font-size: 28px;
-        font-weight: bold;
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 2px;
-    }
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Обновление стиля картинок */
+section .images img, .bot-image {
+    max-width: 100%; /* Растягиваем картинки на всю ширину блока */
+    border-radius: 10px; /* Скругленные углы */
+    height: auto;
+}
+
+/* Скругленные углы для всех блоков */
+section, button, .navbar .contact-button {
+    border-radius: 10px; /* Унифицированные скругленные углы */
+}
 
     .navbar a {
         color: white;
