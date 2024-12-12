@@ -152,7 +152,7 @@ header.navbar .contact-button:hover {
 }
 
 .bot-image {
-    width: 40%;  /* Задаём изображению 40% ширины */
+    width: 50%;  /* Задаём изображению 40% ширины */
     max-width: 300px;  /* Ограничиваем максимальную ширину */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
