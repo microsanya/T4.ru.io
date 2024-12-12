@@ -1,296 +1,89 @@
-/* Обновление общего фона с картинкой */
+/* Увеличение шрифта на сайте */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('design/back.jpg') no-repeat center center fixed; /* Подключаем картинку как фон */
-    background-size: cover; /* Фон покрывает всю площадь экрана */
-    color: #fff;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Было 16px, увеличено */
+    color: #000; /* Цвет текста — чёрный для контраста */
+    background-color: #121212; /* Тёмный фон */
 }
-/* Хедер с паддингом и выравниванием */
-.navbar {
-    background-color: #4b2d72;
-    padding: 20px 40px; /* Добавлены паддинги */
+
+/* Цветовая гамма для акцентов */
+h2 {
+    color: #7c4dff; /* Фиолетовый акцент */
+}
+
+a {
+    color: #1e88e5; /* Синий акцент для ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка на первом слайде */
+.contact button {
+    background-color: #7c4dff; /* Фиолетовая кнопка */
+    color: #fff;
+    font-size: 20px; /* Увеличенный размер текста */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #5a35cc; /* Более тёмный оттенок фиолетового при наведении */
+}
+
+/* Выравнивание текста в футере */
+footer p, footer ul {
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Анимация для плавного появления элементов */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.scroll-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Заголовок и акценты */
+header.navbar {
+    background-color: #1e1e1e; /* Тёмный фон шапки */
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar .logo {
-    font-size: 28px;
-    font-weight: bold;
+header.navbar .contact-button {
+    background-color: #1e88e5;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
 }
 
-/* Обновление стиля картинок */
-section .images img, .bot-image {
-    max-width: 100%; /* Растягиваем картинки на всю ширину блока */
-    border-radius: 10px; /* Скругленные углы */
+header.navbar .contact-button:hover {
+    background-color: #1565c0; /* Темнее при наведении */
+}
+
+/* Изображения */
+.bot-image {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень вокруг изображения */
+    max-width: 100%;
     height: auto;
 }
 
-/* Скругленные углы для всех блоков */
-section, button, .navbar .contact-button {
-    border-radius: 10px; /* Унифицированные скругленные углы */
-}
-
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        margin: 0 20px;
-        transition: color 0.3s;
-    }
-
-        .navbar a:hover {
-            color: #9b4ca2; /* Öâåò äëÿ hover */
-        }
-/* Основной стиль кнопки */
-.navbar .contact-button {
-    background-color: #9b4ca2;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-    text-decoration: none;
-    border: 2px solid #9b4ca2;
-}
-
-.navbar .contact-button:hover {
-    background-color: #7a2c7e;
-    transform: scale(1.1);
-}
-
-/* Êíîïêà */
-button {
-    background-color: #7b3e95; /* Öâåò êíîïêè */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-    button:hover {
-        background-color: #9b4ca2;
-    }
-
-/* Áëîê ñ èçîáðàæåíèåì è êîíòàêòàìè */
-.intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-    padding: 0 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.bot-image {
-    max-width: 400px;
+.images img {
+    border: 2px solid #7c4dff;
     border-radius: 10px;
-    margin-right: 40px;
-}
-
-/* Àíèìàöèÿ äëÿ ïîÿâëåíèÿ áëîêîâ */
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Áëîêè ñ òåêñòîì */
-section {
-    padding: 50px;
-    text-align: center;
-    margin-bottom: 50px;
-    background-color: #4B0082; /* Òåìíûé ôîí äëÿ áëîêîâ */
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-    section h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-
-    section p {
-        font-size: 1.2em;
-    }
-
-    section .images {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-        section .images img {
-            max-width: 60%; /* Óìåíüøàåì êàðòèíêó */
-            height: auto;
-            margin: 10px;
-        }
-
-/* Áëîê "Ñâÿçàòüñÿ ñ íàìè" */
-footer {
-    background-color: #3b2a47;
-    padding: 30px;
-    color: white;
-    text-align: center;
-}
-
-    footer ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-        footer ul li {
-            margin: 10px 0;
-        }
-
-    footer a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-/* Íàñòðîéêà øðèôòà */
-h1, h2, p, button {
-    font-family: 'Arial', sans-serif;
-}
-
-/* Àäàïòèâíàÿ âåðñòêà */
-
-/* Ñòèëü äëÿ ýêðàíîâ äî 768px (ïëàíøåòû è ìîáèëüíûå óñòðîéñòâà) */
-@media (max-width: 768px) {
-
-    /* Центрируем логотип PWRT4 в шапке */
-    .navbar {
-        flex-direction: column; /* Элементы шапки становятся вертикальными */
-        align-items: center; /* Центрируем элементы по горизонтали */
-        padding: 20px 10px; /* Увеличиваем отступы для мобильных устройств */
-    }
-
-    .navbar .logo {
-        font-size: 28px; /* Подстраиваем размер шрифта под мобильные устройства */
-        text-align: center; /* Центрируем текст логотипа */
-        margin-bottom: 20px; /* Отступ снизу для логотипа */
-    }
-
-    .navbar .contact-button {
-        font-size: 16px; /* Уменьшаем размер шрифта для кнопки */
-        padding: 12px 20px; /* Увеличиваем отступы кнопки */
-        width: auto; /* Убираем растяжение на всю ширину */
-        max-width: 90%; /* Ограничиваем максимальную ширину кнопки */
-        margin-top: 20px; /* Отступ сверху для кнопки */
-        margin-left: auto; /* Центрируем кнопку */
-        margin-right: auto; /* Центрируем кнопку */
-    }
-
-        .navbar a {
-            margin: 10px 0;
-        }
-
-    .intro {
-        flex-direction: column;
-        margin: 20px 0;
-        padding: 0 15px;
-    }
-
-    .bot-image {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    section {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-        section h2 {
-            font-size: 1.8em;
-        }
-
-        section p {
-            font-size: 1.1em;
-        }
-
-        section .images {
-            flex-direction: column;
-        }
-
-            section .images img {
-                max-width: 90%; /* Óìåíüøàåì êàðòèíêó íà ìîáèëüíûõ óñòðîéñòâàõ */
-                margin: 10px 0;
-            }
-
-    button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-}
-
-/* Ñòèëü äëÿ ýêðàíîâ äî 480px (ìîáèëüíûå óñòðîéñòâà) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .navbar .logo {
-        font-size: 24px; /* Еще меньше шрифт на совсем маленьких экранах */
-        text-align: center;
-    }
-
-    .navbar .contact-button {
-        font-size: 14px; /* Еще меньше шрифт для кнопки */
-        padding: 10px 20px; /* Уменьшаем отступы для кнопки */
-        max-width: 90%; /* Ограничиваем максимальную ширину кнопки */
-        width: auto; /* Убираем растяжение на всю ширину */
-        margin-left: auto; /* Центрируем кнопку */
-        margin-right: auto; /* Центрируем кнопку */
-    }
-
-    .intro h1 {
-        font-size: 22px;
-    }
-
-    .intro p {
-        font-size: 14px;
-    }
-
-    .bot-image {
-        max-width: 80%;
-    }
-
-    section h2 {
-        font-size: 1.6em;
-    }
-
-    section p {
-        font-size: 1em;
-    }
-
-    section .images img {
-        max-width: 100%;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
+    margin: 10px 0;
 }

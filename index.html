@@ -10,14 +10,14 @@
 
     <!-- Шапка с меню -->
     <header class="navbar">
-    <div class="logo">T4</div>
-    <a href="#contacts" class="contact-button">Связаться с нами</a>
+        <div class="logo">T4</div>
+        <a href="#contacts" class="contact-button">Связаться с нами</a>
     </header>
 
     <section class="intro">
-        <img src="design\bot_image.jpg" alt="Картинка бота" class="bot-image">
+        <img src="design/bot_image.jpg" alt="Картинка бота" class="bot-image">
         <div class="contact">
-            <button onclick="scrollToContacts()">Связаться с нами: Чат-бот (ЧБ)</button>
+            <button onclick="redirectToTelegram()">Связаться с нами: Чат-бот (ЧБ)</button>
             <p>Чат-боты становятся всё более востребованными. Они позволяют клиентам получать нужную информацию быстро и удобно, без необходимости ждать ответа от реального человека. Это эффективный способ взаимодействия, который экономит время и ресурсы.</p>
         </div>
     </section>
@@ -26,7 +26,7 @@
         <h2>Уникальный дизайн для лучшего впечатления</h2>
         <p>Мы создаём эстетичные и удобные интерфейсы, которые подчёркивают стиль вашего бренда. Наши решения визуально привлекательны и интуитивно понятны для пользователей.</p>
         <div class="images">
-            <img src="design\design1.png" alt="Картинка 1">
+            <img src="design/design1.png" alt="Картинка 1">
         </div>
     </section>
 
@@ -42,18 +42,19 @@
 
     <footer id="contacts">
         <h2>Свяжитесь с нами</h2>
-        <p>Мы всегда готовы ответить на ваши вопросы и предложить оптимальное решение для вашего бизнеса. Воспользуйтесь одним из удобных способов связи:</p>
-        <ul>
+        <p style="text-align: left;">Мы всегда готовы ответить на ваши вопросы и предложить оптимальное решение для вашего бизнеса. Воспользуйтесь одним из удобных способов связи:</p>
+        <ul style="text-align: left;">
             <li>WhatsApp: <a href="https://wa.me/79994958922" target="_blank">+7 999 495-89-22</a></li>
             <li>Telegram: <a href="https://t.me/vapros13" target="_blank">@vapros13</a></li>
             <li>Email: <a href="mailto:vapross11@gmail.com">vapross11@gmail.com</a></li>
         </ul>
-        <p>Мы сделаем бота под ваш бизнес, по вашим пожеланиям и корректировкой.</p>
+        <p style="text-align: left;">Мы сделаем бот под ваш бизнес, по вашим пожеланиям и корректировкой.</p>
     </footer>
 
     <script>
-        function scrollToContacts() {
-            document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
+        // Функция для перехода к Telegram-боту
+        function redirectToTelegram() {
+            window.location.href = "https://t.me/Pwrt4_bot";
         }
 
         // Функция для активации анимации
