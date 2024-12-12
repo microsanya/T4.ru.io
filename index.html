@@ -58,31 +58,31 @@
         }
 
         // Функция для проверки и добавления анимации
-function handleScrollAnimations() {
-    const elements = document.querySelectorAll('.intro, section');
-    const windowHeight = window.innerHeight;
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.intro, section');
+            const windowHeight = window.innerHeight;
 
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
 
-        if (elementTop < windowHeight - 150) { // Если элемент попадает в видимую область
-            element.classList.add('scroll-in'); // Добавляем анимацию
-        } else {
-            element.classList.remove('scroll-in'); // Убираем анимацию
+                if (elementTop < windowHeight - 150) { // Если элемент попадает в видимую область
+                    element.classList.add('scroll-in'); // Добавляем анимацию
+                } else {
+                    element.classList.remove('scroll-in'); // Убираем анимацию
+                }
+            });
         }
-    });
-}
 
-// Запуск функции на загрузке страницы
-window.addEventListener('load', () => {
-    document.querySelectorAll('.intro, section').forEach(element => {
-        element.classList.add('fade-in'); // Применяем базовые стили
-    });
-    handleScrollAnimations(); // Проверяем видимость сразу после загрузки
-});
+        // Запуск функции на загрузке страницы
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.intro, section').forEach(element => {
+                element.classList.add('fade-in'); // Применяем базовые стили
+            });
+            handleScrollAnimations(); // Проверяем видимость сразу после загрузки
+        });
 
-// Запускаем проверку анимации при прокрутке
-window.addEventListener('scroll', handleScrollAnimations);
+        // Запускаем проверку анимации при прокрутке
+        window.addEventListener('scroll', handleScrollAnimations);
     </script>
 </body>
 </html>
