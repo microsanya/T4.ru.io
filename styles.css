@@ -41,6 +41,20 @@ section.design {
     border-left: 5px solid #007bff; /* Синий акцент */
 }
 
+/* Секция с изображением и текстом в "design" */
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.design p {
+    width: 50%; /* Задаём тексту 50% ширины */
+    font-size: 18px;
+}
+
+
 section.why-us {
     border-left: 5px solid #6a0dad; /* Фиолетовый акцент */
 }
@@ -129,20 +143,30 @@ header.navbar .contact-button:hover {
     background-color: #1565c0; /* Темнее при наведении */
 }
 
-/* Изображения */
-.bot-image {
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 100%;  /* Чтобы изображение не выходило за пределы контейнера */
-    height: auto;     /* Сохраняем пропорции изображения */
+/* Секция intro для выравнивания изображения и кнопки в одну линию */
+.intro {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов по центру */
+    justify-content: space-between; /* Местоположение элементов по бокам */
+    gap: 20px; /* Расстояние между изображением и кнопкой */
 }
 
+.bot-image {
+    width: 40%;  /* Задаём изображению 40% ширины */
+    max-width: 300px;  /* Ограничиваем максимальную ширину */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+
+
 .images img {
+    width: 45%; /* Ограничиваем изображению 45% ширины */
+    max-width: 400px; /* Максимальная ширина для изображения */
     border: 2px solid #7c4dff;
     border-radius: 10px;
     margin: 10px 0;
-    max-width: 100%;  /* Ограничиваем ширину изображений */
-    height: auto;     /* Сохраняем пропорции */
+    height: auto;
 }
 
 /* Медиазапросы для адаптивности */
