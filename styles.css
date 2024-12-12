@@ -1,23 +1,73 @@
-/* Увеличение шрифта на сайте */
+/* Градиентный фон для всей страницы */
 body {
+    background: linear-gradient(to bottom, #001f3f, #000000); /* От синего к черному */
+    color: #ffffff; /* Белый текст */
+    font-size: 18px; /* Увеличенный шрифт */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Было 16px, увеличено */
-    color: #000; /* Цвет текста — чёрный для контраста */
-    background-color: #121212; /* Тёмный фон */
 }
 
-/* Цветовая гамма для акцентов */
+/* Добавление цветных полос под заголовками */
 h2 {
-    color: #7c4dff; /* Фиолетовый акцент */
+    position: relative;
+    margin-bottom: 30px;
 }
 
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, #6a0dad, #007bff); /* Фиолетовый к синему */
+    margin-top: 10px;
+}
+
+/* Секция с блоками текста */
+section {
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+/* Визуальное выделение синим под текстом */
+section.design {
+    border-left: 5px solid #007bff; /* Синий акцент */
+}
+
+section.why-us {
+    border-left: 5px solid #6a0dad; /* Фиолетовый акцент */
+}
+
+/* Цвета ссылок */
 a {
-    color: #1e88e5; /* Синий акцент для ссылок */
+    color: #00aaff;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Кнопки */
+button {
+    background: linear-gradient(to right, #6a0dad, #007bff); /* Фиолетовый-синий градиент */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 /* Кнопка на первом слайде */
