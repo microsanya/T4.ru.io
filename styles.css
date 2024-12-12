@@ -40,16 +40,21 @@ footer p, footer ul {
     text-align: left; /* Выравнивание по левому краю */
 }
 
-/* Анимация для плавного появления элементов */
+/* Анимация для плавного появления */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1; /* Делаем элементы видимыми изначально */
+    transform: translateY(0); /* Изначально на месте */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.scroll-in {
-    opacity: 1;
-    transform: translateY(0);
+.scroll-in {
+    opacity: 1; /* Остаётся видимым */
+    transform: translateY(0); /* Убираем смещение */
+}
+
+.fade-in:not(.scroll-in) {
+    opacity: 0; /* Невидимый до прокрутки */
+    transform: translateY(20px); /* Смещение вниз */
 }
 
 /* Заголовок и акценты */
