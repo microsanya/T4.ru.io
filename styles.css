@@ -1,3 +1,62 @@
+/* Контейнер для блоков услуг */
+.service-boxes {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение блоков */
+    gap: 20px;
+    flex-wrap: wrap; /* Блоки могут переходить на новую строку при необходимости */
+    margin: 0 auto; /* Центрируем контейнер */
+    max-width: 1200px; /* Максимальная ширина для контейнера */
+}
+
+/* Оформление каждого блока услуги */
+.service-box {
+    background: linear-gradient(to right, #092979, #000000);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: calc(33.333% - 20px); /* Три блока в ряд, с отступом */
+    min-width: 250px; /* Минимальная ширина блока */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto; /* Автоматическая высота */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Учитываем padding в ширину блока */
+}
+
+/* Подгоняем блоки по высоте, чтобы они выглядели одинаковыми */
+.service-box p {
+    margin-bottom: 15px;
+    flex-grow: 1; /* Позволяет тексту растягиваться */
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.service-box:hover {
+    transform: translateY(-10px); /* Легкое поднятие блока при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.service-link {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, #6a0dad, #007bff);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: #5a35cc;
+}
+
+
 /* Градиентный фон для всей страницы */
 body {
     background: linear-gradient(to bottom, #001f3f, #000000); /* От синего к черному */
@@ -7,6 +66,45 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+}
+
+/* Стили для шапки */
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Эффект при наведении на ссылку */
+header nav ul li a:hover {
+    background-color: #007bff; /* Синий фон при наведении */
+    color: #fff; /* Белый текст */
+    transform: scale(1.1); /* Легкое увеличение */
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1); /* Подчеркивание появляется */
+}
+
+
+header nav ul li a.active {
+    font-weight: bold; /* Выделение активной ссылки */
+    color: #007BFF; /* Цвет для активной ссылки */
 }
 
 /* Добавление цветных полос под заголовками */
@@ -123,7 +221,7 @@ footer p, footer ul {
 
 /* Заголовок и акценты */
 header.navbar {
-    background-color: #1e1e1e; /* Тёмный фон шапки */
+    background-color: #4c166d; /* Тёмный фон шапки */
     color: #fff;
     padding: 20px;
     display: flex;
@@ -191,5 +289,12 @@ header.navbar .contact-button:hover {
 
     .design p {
         width: 90%; /* Текст также будет занимать большую ширину */
+    }
+    .service-boxes {
+        flex-direction: column; /* На мобильных устройствах блоки идут один под одним */
+        align-items: center;
+    }
+    .service-box {
+        width: 80%; /* Уменьшаем ширину блоков на мобильных */
     }
 }
