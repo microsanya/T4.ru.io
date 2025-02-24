@@ -1,3 +1,11 @@
+.logo-image {
+    width: 20%;  /* Задаём изображению 40% ширины */
+    max-width: 50px;  /* Ограничиваем максимальную ширину */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+
 /* Контейнер для блоков услуг */
 .service-boxes {
     display: flex;
